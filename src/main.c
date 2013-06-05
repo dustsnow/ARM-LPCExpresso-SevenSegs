@@ -30,7 +30,7 @@ static void setupHardware(void) {
 	// TODO: Put hardware configuration and initialisation in here
 	
 	// Warning: If you do not initialize the hardware clock, the timings will be inaccurate
-	led2_init();
+//	led2_init();
 	SevenSegs_init();
 }
 
