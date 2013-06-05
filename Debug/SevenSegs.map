@@ -545,7 +545,7 @@ END GROUP
                 0x0000000010008000                __top_RamLoc32 = 0x10008000
                 0x0000000020084000                __top_RamAHB32 = 0x20084000
 
-.text           0x0000000000000000     0x156c
+.text           0x0000000000000000     0x1480
  FILL mask 0xff
                 0x0000000000000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -554,10 +554,10 @@ END GROUP
                 0x00000000000000cc                . = ALIGN (0x4)
                 0x00000000000000cc                __section_table_start = .
                 0x00000000000000cc                __data_section_table = .
-                0x00000000000000cc        0x4 LONG 0x156c LOADADDR (.data)
+                0x00000000000000cc        0x4 LONG 0x1480 LOADADDR (.data)
                 0x00000000000000d0        0x4 LONG 0x10000000 ADDR (.data)
                 0x00000000000000d4        0x4 LONG 0x10 SIZEOF (.data)
-                0x00000000000000d8        0x4 LONG 0x156c LOADADDR (.data_RAM2)
+                0x00000000000000d8        0x4 LONG 0x1480 LOADADDR (.data_RAM2)
                 0x00000000000000dc        0x4 LONG 0x2007c000 ADDR (.data_RAM2)
                 0x00000000000000e0        0x4 LONG 0x0 SIZEOF (.data_RAM2)
                 0x00000000000000e4                __data_section_table_end = .
@@ -571,207 +571,207 @@ END GROUP
  *(.after_vectors*)
  *(.text*)
  .text.SevenSegs_init
-                0x00000000000000f4       0xfc ./src/SevenSegs.o
+                0x00000000000000f4       0x70 ./src/SevenSegs.o
                 0x00000000000000f4                SevenSegs_init
  .text.SevenSegs_on
-                0x00000000000001f0       0x50 ./src/SevenSegs.o
-                0x00000000000001f0                SevenSegs_on
+                0x0000000000000164       0x28 ./src/SevenSegs.o
+                0x0000000000000164                SevenSegs_on
  .text.SevenSegs_off
-                0x0000000000000240       0x50 ./src/SevenSegs.o
-                0x0000000000000240                SevenSegs_off
+                0x000000000000018c       0x18 ./src/SevenSegs.o
+                0x000000000000018c                SevenSegs_off
  .text.ResetISR
-                0x0000000000000290       0x64 ./src/cr_startup_lpc17.o
-                0x0000000000000290                ResetISR
+                0x00000000000001a4       0x64 ./src/cr_startup_lpc17.o
+                0x00000000000001a4                ResetISR
  .text.NMI_Handler
-                0x00000000000002f4        0x8 ./src/cr_startup_lpc17.o
-                0x00000000000002f4                NMI_Handler
+                0x0000000000000208        0x8 ./src/cr_startup_lpc17.o
+                0x0000000000000208                NMI_Handler
  .text.HardFault_Handler
-                0x00000000000002fc        0x8 ./src/cr_startup_lpc17.o
-                0x00000000000002fc                HardFault_Handler
+                0x0000000000000210        0x8 ./src/cr_startup_lpc17.o
+                0x0000000000000210                HardFault_Handler
  .text.MemManage_Handler
-                0x0000000000000304        0x8 ./src/cr_startup_lpc17.o
-                0x0000000000000304                MemManage_Handler
+                0x0000000000000218        0x8 ./src/cr_startup_lpc17.o
+                0x0000000000000218                MemManage_Handler
  .text.BusFault_Handler
-                0x000000000000030c        0x8 ./src/cr_startup_lpc17.o
-                0x000000000000030c                BusFault_Handler
+                0x0000000000000220        0x8 ./src/cr_startup_lpc17.o
+                0x0000000000000220                BusFault_Handler
  .text.UsageFault_Handler
-                0x0000000000000314        0x8 ./src/cr_startup_lpc17.o
-                0x0000000000000314                UsageFault_Handler
+                0x0000000000000228        0x8 ./src/cr_startup_lpc17.o
+                0x0000000000000228                UsageFault_Handler
  .text.DebugMon_Handler
-                0x000000000000031c        0x8 ./src/cr_startup_lpc17.o
-                0x000000000000031c                DebugMon_Handler
+                0x0000000000000230        0x8 ./src/cr_startup_lpc17.o
+                0x0000000000000230                DebugMon_Handler
  .text.IntDefaultHandler
-                0x0000000000000324        0x8 ./src/cr_startup_lpc17.o
-                0x0000000000000324                ENET_IRQHandler
-                0x0000000000000324                RIT_IRQHandler
-                0x0000000000000324                I2C0_IRQHandler
-                0x0000000000000324                USBActivity_IRQHandler
-                0x0000000000000324                PWM1_IRQHandler
-                0x0000000000000324                I2C1_IRQHandler
-                0x0000000000000324                EINT2_IRQHandler
-                0x0000000000000324                UART1_IRQHandler
-                0x0000000000000324                EINT3_IRQHandler
-                0x0000000000000324                CANActivity_IRQHandler
-                0x0000000000000324                TIMER3_IRQHandler
-                0x0000000000000324                UART0_IRQHandler
-                0x0000000000000324                IntDefaultHandler
-                0x0000000000000324                PLL0_IRQHandler
-                0x0000000000000324                CAN_IRQHandler
-                0x0000000000000324                PLL1_IRQHandler
-                0x0000000000000324                SSP0_IRQHandler
-                0x0000000000000324                I2S_IRQHandler
-                0x0000000000000324                I2C2_IRQHandler
-                0x0000000000000324                RTC_IRQHandler
-                0x0000000000000324                TIMER0_IRQHandler
-                0x0000000000000324                SPI_IRQHandler
-                0x0000000000000324                EINT1_IRQHandler
-                0x0000000000000324                TIMER1_IRQHandler
-                0x0000000000000324                UART2_IRQHandler
-                0x0000000000000324                ADC_IRQHandler
-                0x0000000000000324                SSP1_IRQHandler
-                0x0000000000000324                USB_IRQHandler
-                0x0000000000000324                BOD_IRQHandler
-                0x0000000000000324                WDT_IRQHandler
-                0x0000000000000324                QEI_IRQHandler
-                0x0000000000000324                EINT0_IRQHandler
-                0x0000000000000324                DMA_IRQHandler
-                0x0000000000000324                UART3_IRQHandler
-                0x0000000000000324                MCPWM_IRQHandler
-                0x0000000000000324                TIMER2_IRQHandler
- .text.led2_on  0x000000000000032c       0x18 ./src/leds.o
-                0x000000000000032c                led2_on
+                0x0000000000000238        0x8 ./src/cr_startup_lpc17.o
+                0x0000000000000238                ENET_IRQHandler
+                0x0000000000000238                RIT_IRQHandler
+                0x0000000000000238                I2C0_IRQHandler
+                0x0000000000000238                USBActivity_IRQHandler
+                0x0000000000000238                PWM1_IRQHandler
+                0x0000000000000238                I2C1_IRQHandler
+                0x0000000000000238                EINT2_IRQHandler
+                0x0000000000000238                UART1_IRQHandler
+                0x0000000000000238                EINT3_IRQHandler
+                0x0000000000000238                CANActivity_IRQHandler
+                0x0000000000000238                TIMER3_IRQHandler
+                0x0000000000000238                UART0_IRQHandler
+                0x0000000000000238                IntDefaultHandler
+                0x0000000000000238                PLL0_IRQHandler
+                0x0000000000000238                CAN_IRQHandler
+                0x0000000000000238                PLL1_IRQHandler
+                0x0000000000000238                SSP0_IRQHandler
+                0x0000000000000238                I2S_IRQHandler
+                0x0000000000000238                I2C2_IRQHandler
+                0x0000000000000238                RTC_IRQHandler
+                0x0000000000000238                TIMER0_IRQHandler
+                0x0000000000000238                SPI_IRQHandler
+                0x0000000000000238                EINT1_IRQHandler
+                0x0000000000000238                TIMER1_IRQHandler
+                0x0000000000000238                UART2_IRQHandler
+                0x0000000000000238                ADC_IRQHandler
+                0x0000000000000238                SSP1_IRQHandler
+                0x0000000000000238                USB_IRQHandler
+                0x0000000000000238                BOD_IRQHandler
+                0x0000000000000238                WDT_IRQHandler
+                0x0000000000000238                QEI_IRQHandler
+                0x0000000000000238                EINT0_IRQHandler
+                0x0000000000000238                DMA_IRQHandler
+                0x0000000000000238                UART3_IRQHandler
+                0x0000000000000238                MCPWM_IRQHandler
+                0x0000000000000238                TIMER2_IRQHandler
+ .text.led2_on  0x0000000000000240       0x18 ./src/leds.o
+                0x0000000000000240                led2_on
  .text.led2_off
-                0x0000000000000344       0x18 ./src/leds.o
-                0x0000000000000344                led2_off
+                0x0000000000000258       0x18 ./src/leds.o
+                0x0000000000000258                led2_off
  .text.setupHardware
-                0x000000000000035c        0xc ./src/main.o
+                0x0000000000000270        0xc ./src/main.o
  .text.vUserTask1
-                0x0000000000000368       0x48 ./src/main.o
-                0x0000000000000368                vUserTask1
+                0x000000000000027c       0x48 ./src/main.o
+                0x000000000000027c                vUserTask1
  .text.vUserTask2
-                0x00000000000003b0       0x28 ./src/main.o
-                0x00000000000003b0                vUserTask2
- .text.main     0x00000000000003d8       0x80 ./src/main.o
-                0x00000000000003d8                main
+                0x00000000000002c4       0x28 ./src/main.o
+                0x00000000000002c4                vUserTask2
+ .text.main     0x00000000000002ec       0x80 ./src/main.o
+                0x00000000000002ec                main
  .text.vListInitialise
-                0x0000000000000458       0x40 ./FreeRTOS_src/list.o
-                0x0000000000000458                vListInitialise
+                0x000000000000036c       0x40 ./FreeRTOS_src/list.o
+                0x000000000000036c                vListInitialise
  .text.vListInitialiseItem
-                0x0000000000000498       0x1c ./FreeRTOS_src/list.o
-                0x0000000000000498                vListInitialiseItem
+                0x00000000000003ac       0x1c ./FreeRTOS_src/list.o
+                0x00000000000003ac                vListInitialiseItem
  .text.vListInsertEnd
-                0x00000000000004b4       0x54 ./FreeRTOS_src/list.o
-                0x00000000000004b4                vListInsertEnd
+                0x00000000000003c8       0x54 ./FreeRTOS_src/list.o
+                0x00000000000003c8                vListInsertEnd
  .text.vListInsert
-                0x0000000000000508       0x78 ./FreeRTOS_src/list.o
-                0x0000000000000508                vListInsert
+                0x000000000000041c       0x78 ./FreeRTOS_src/list.o
+                0x000000000000041c                vListInsert
  .text.vListRemove
-                0x0000000000000580       0x54 ./FreeRTOS_src/list.o
-                0x0000000000000580                vListRemove
+                0x0000000000000494       0x54 ./FreeRTOS_src/list.o
+                0x0000000000000494                vListRemove
  .text.xTaskGenericCreate
-                0x00000000000005d4      0x1bc ./FreeRTOS_src/tasks.o
-                0x00000000000005d4                xTaskGenericCreate
+                0x00000000000004e8      0x1bc ./FreeRTOS_src/tasks.o
+                0x00000000000004e8                xTaskGenericCreate
  .text.vTaskDelay
-                0x0000000000000790       0x5c ./FreeRTOS_src/tasks.o
-                0x0000000000000790                vTaskDelay
+                0x00000000000006a4       0x5c ./FreeRTOS_src/tasks.o
+                0x00000000000006a4                vTaskDelay
  .text.vTaskStartScheduler
-                0x00000000000007ec       0x74 ./FreeRTOS_src/tasks.o
-                0x00000000000007ec                vTaskStartScheduler
+                0x0000000000000700       0x74 ./FreeRTOS_src/tasks.o
+                0x0000000000000700                vTaskStartScheduler
  .text.vTaskSuspendAll
-                0x0000000000000860       0x24 ./FreeRTOS_src/tasks.o
-                0x0000000000000860                vTaskSuspendAll
+                0x0000000000000774       0x24 ./FreeRTOS_src/tasks.o
+                0x0000000000000774                vTaskSuspendAll
  .text.xTaskResumeAll
-                0x0000000000000884      0x154 ./FreeRTOS_src/tasks.o
-                0x0000000000000884                xTaskResumeAll
+                0x0000000000000798      0x154 ./FreeRTOS_src/tasks.o
+                0x0000000000000798                xTaskResumeAll
  .text.vTaskIncrementTick
-                0x00000000000009d8      0x1b8 ./FreeRTOS_src/tasks.o
-                0x00000000000009d8                vTaskIncrementTick
+                0x00000000000008ec      0x1b8 ./FreeRTOS_src/tasks.o
+                0x00000000000008ec                vTaskIncrementTick
  .text.vTaskSwitchContext
-                0x0000000000000b90      0x194 ./FreeRTOS_src/tasks.o
-                0x0000000000000b90                vTaskSwitchContext
+                0x0000000000000aa4      0x194 ./FreeRTOS_src/tasks.o
+                0x0000000000000aa4                vTaskSwitchContext
  .text.prvIdleTask
-                0x0000000000000d24       0x10 ./FreeRTOS_src/tasks.o
+                0x0000000000000c38       0x10 ./FreeRTOS_src/tasks.o
  .text.prvInitialiseTCBVariables
-                0x0000000000000d34       0x78 ./FreeRTOS_src/tasks.o
+                0x0000000000000c48       0x78 ./FreeRTOS_src/tasks.o
  .text.prvInitialiseTaskLists
-                0x0000000000000dac       0xa4 ./FreeRTOS_src/tasks.o
+                0x0000000000000cc0       0xa4 ./FreeRTOS_src/tasks.o
  .text.prvCheckTasksWaitingTermination
-                0x0000000000000e50       0x94 ./FreeRTOS_src/tasks.o
+                0x0000000000000d64       0x94 ./FreeRTOS_src/tasks.o
  .text.prvAddCurrentTaskToDelayedList
-                0x0000000000000ee4       0x8c ./FreeRTOS_src/tasks.o
+                0x0000000000000df8       0x8c ./FreeRTOS_src/tasks.o
  .text.prvAllocateTCBAndStack
-                0x0000000000000f70       0x74 ./FreeRTOS_src/tasks.o
+                0x0000000000000e84       0x74 ./FreeRTOS_src/tasks.o
  .text.prvDeleteTCB
-                0x0000000000000fe4       0x20 ./FreeRTOS_src/tasks.o
+                0x0000000000000ef8       0x20 ./FreeRTOS_src/tasks.o
  .text.pvPortMalloc
-                0x0000000000001004      0x1b0 ./FreeRTOS_portable/MemMang/heap_2.o
-                0x0000000000001004                pvPortMalloc
+                0x0000000000000f18      0x1b0 ./FreeRTOS_portable/MemMang/heap_2.o
+                0x0000000000000f18                pvPortMalloc
  .text.vPortFree
-                0x00000000000011b4       0x88 ./FreeRTOS_portable/MemMang/heap_2.o
-                0x00000000000011b4                vPortFree
+                0x00000000000010c8       0x88 ./FreeRTOS_portable/MemMang/heap_2.o
+                0x00000000000010c8                vPortFree
  .text.pxPortInitialiseStack
-                0x000000000000123c       0x60 ./FreeRTOS_portable/port.o
-                0x000000000000123c                pxPortInitialiseStack
+                0x0000000000001150       0x60 ./FreeRTOS_portable/port.o
+                0x0000000000001150                pxPortInitialiseStack
  .text.vPortSVCHandler
-                0x000000000000129c       0x20 ./FreeRTOS_portable/port.o
-                0x000000000000129c                vPortSVCHandler
+                0x00000000000011b0       0x20 ./FreeRTOS_portable/port.o
+                0x00000000000011b0                vPortSVCHandler
  .text.vPortStartFirstTask
-                0x00000000000012bc       0x14 ./FreeRTOS_portable/port.o
-                0x00000000000012bc                vPortStartFirstTask
+                0x00000000000011d0       0x14 ./FreeRTOS_portable/port.o
+                0x00000000000011d0                vPortStartFirstTask
  .text.xPortStartScheduler
-                0x00000000000012d0       0x54 ./FreeRTOS_portable/port.o
-                0x00000000000012d0                xPortStartScheduler
+                0x00000000000011e4       0x54 ./FreeRTOS_portable/port.o
+                0x00000000000011e4                xPortStartScheduler
  .text.vPortYieldFromISR
-                0x0000000000001324       0x18 ./FreeRTOS_portable/port.o
-                0x0000000000001324                vPortYieldFromISR
+                0x0000000000001238       0x18 ./FreeRTOS_portable/port.o
+                0x0000000000001238                vPortYieldFromISR
  .text.vPortEnterCritical
-                0x000000000000133c       0x2c ./FreeRTOS_portable/port.o
-                0x000000000000133c                vPortEnterCritical
+                0x0000000000001250       0x2c ./FreeRTOS_portable/port.o
+                0x0000000000001250                vPortEnterCritical
  .text.vPortExitCritical
-                0x0000000000001368       0x38 ./FreeRTOS_portable/port.o
-                0x0000000000001368                vPortExitCritical
+                0x000000000000127c       0x38 ./FreeRTOS_portable/port.o
+                0x000000000000127c                vPortExitCritical
  .text.xPortPendSVHandler
-                0x00000000000013a0       0x3c ./FreeRTOS_portable/port.o
-                0x00000000000013a0                xPortPendSVHandler
+                0x00000000000012b4       0x3c ./FreeRTOS_portable/port.o
+                0x00000000000012b4                xPortPendSVHandler
  .text.xPortSysTickHandler
-                0x00000000000013dc       0x38 ./FreeRTOS_portable/port.o
-                0x00000000000013dc                xPortSysTickHandler
+                0x00000000000012f0       0x38 ./FreeRTOS_portable/port.o
+                0x00000000000012f0                xPortSysTickHandler
  .text.prvSetupTimerInterrupt
-                0x0000000000001414       0x2c ./FreeRTOS_portable/port.o
- .text.memset   0x0000000000001440       0x90 /Applications/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memset.o)
-                0x0000000000001440                memset
- .text.strncpy  0x00000000000014d0       0x68 /Applications/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strncpy.o)
-                0x00000000000014d0                strncpy
+                0x0000000000001328       0x2c ./FreeRTOS_portable/port.o
+ .text.memset   0x0000000000001354       0x90 /Applications/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memset.o)
+                0x0000000000001354                memset
+ .text.strncpy  0x00000000000013e4       0x68 /Applications/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strncpy.o)
+                0x00000000000013e4                strncpy
  *(.rodata .rodata.*)
- .rodata        0x0000000000001538       0x10 ./src/main.o
- .rodata        0x0000000000001548       0x20 ./FreeRTOS_src/tasks.o
+ .rodata        0x000000000000144c       0x10 ./src/main.o
+ .rodata        0x000000000000145c       0x20 ./FreeRTOS_src/tasks.o
  .rodata.heapSTRUCT_SIZE
-                0x0000000000001568        0x2 ./FreeRTOS_portable/MemMang/heap_2.o
-                0x000000000000156c                . = ALIGN (0x4)
- *fill*         0x000000000000156a        0x2 ff
+                0x000000000000147c        0x2 ./FreeRTOS_portable/MemMang/heap_2.o
+                0x0000000000001480                . = ALIGN (0x4)
+ *fill*         0x000000000000147e        0x2 ff
 
-.glue_7         0x000000000000156c        0x0
+.glue_7         0x0000000000001480        0x0
  .glue_7        0x0000000000000000        0x0 linker stubs
 
-.glue_7t        0x000000000000156c        0x0
+.glue_7t        0x0000000000001480        0x0
  .glue_7t       0x0000000000000000        0x0 linker stubs
 
-.vfp11_veneer   0x000000000000156c        0x0
+.vfp11_veneer   0x0000000000001480        0x0
  .vfp11_veneer  0x0000000000000000        0x0 linker stubs
 
-.v4_bx          0x000000000000156c        0x0
+.v4_bx          0x0000000000001480        0x0
  .v4_bx         0x0000000000000000        0x0 linker stubs
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000000000000156c                __exidx_start = .
+                0x0000000000001480                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x000000000000156c                __exidx_end = .
-                0x000000000000156c                _etext = .
+                0x0000000000001480                __exidx_end = .
+                0x0000000000001480                _etext = .
 
-.data_RAM2      0x000000002007c000        0x0 load address 0x000000000000156c
+.data_RAM2      0x000000002007c000        0x0 load address 0x0000000000001480
  FILL mask 0xff
  *(.data.$RAM2*)
  *(.data.$RamAHB32*)
@@ -783,7 +783,7 @@ END GROUP
                 0x0000000010000000                . = ALIGN (0x4)
                 0x0000000010000000                _end_uninit_RESERVED = .
 
-.data           0x0000000010000000       0x10 load address 0x000000000000156c
+.data           0x0000000010000000       0x10 load address 0x0000000000001480
  FILL mask 0xff
                 0x0000000010000000                _data = .
  *(vtable)
@@ -951,18 +951,18 @@ OUTPUT(SevenSegs.axf elf32-littlearm)
  .debug_ranges  0x0000000000000328       0x28 ./FreeRTOS_portable/MemMang/heap_2.o
  .debug_ranges  0x0000000000000350       0x60 ./FreeRTOS_portable/port.o
 
-.debug_line     0x0000000000000000     0x336c
- .debug_line    0x0000000000000000      0x2bf ./src/SevenSegs.o
- .debug_line    0x00000000000002bf       0xf0 ./src/cr_startup_lpc17.o
- .debug_line    0x00000000000003af      0x2a8 ./src/leds.o
- .debug_line    0x0000000000000657      0x255 ./src/main.o
- .debug_line    0x00000000000008ac      0x30f ./FreeRTOS_src/croutine.o
- .debug_line    0x0000000000000bbb      0x690 ./FreeRTOS_src/list.o
- .debug_line    0x000000000000124b      0x907 ./FreeRTOS_src/queue.o
- .debug_line    0x0000000000001b52      0xcf0 ./FreeRTOS_src/tasks.o
- .debug_line    0x0000000000002842      0x1d6 ./FreeRTOS_src/timers.o
- .debug_line    0x0000000000002a18      0x6cd ./FreeRTOS_portable/MemMang/heap_2.o
- .debug_line    0x00000000000030e5      0x287 ./FreeRTOS_portable/port.o
+.debug_line     0x0000000000000000     0x3369
+ .debug_line    0x0000000000000000      0x2bc ./src/SevenSegs.o
+ .debug_line    0x00000000000002bc       0xf0 ./src/cr_startup_lpc17.o
+ .debug_line    0x00000000000003ac      0x2a8 ./src/leds.o
+ .debug_line    0x0000000000000654      0x255 ./src/main.o
+ .debug_line    0x00000000000008a9      0x30f ./FreeRTOS_src/croutine.o
+ .debug_line    0x0000000000000bb8      0x690 ./FreeRTOS_src/list.o
+ .debug_line    0x0000000000001248      0x907 ./FreeRTOS_src/queue.o
+ .debug_line    0x0000000000001b4f      0xcf0 ./FreeRTOS_src/tasks.o
+ .debug_line    0x000000000000283f      0x1d6 ./FreeRTOS_src/timers.o
+ .debug_line    0x0000000000002a15      0x6cd ./FreeRTOS_portable/MemMang/heap_2.o
+ .debug_line    0x00000000000030e2      0x287 ./FreeRTOS_portable/port.o
 
 .debug_macinfo  0x0000000000000000    0x3d782
  .debug_macinfo
